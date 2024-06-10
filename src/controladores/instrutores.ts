@@ -5,6 +5,9 @@ type TInstrutores = {
     nome:string,
     email:string
 }
+
+let proximoIdentificador = 3 
+
 const instrutores:TInstrutores[] = [
     {
         id: 1,
@@ -41,7 +44,7 @@ export const Cadastrar = (req:Request,res:Response) => {
     const {nome, email} = req.body
 
     const novoInstrutor = {
-        id: 3,
+        id: proximoIdentificador++,
         nome,
         email
     }
